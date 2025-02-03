@@ -25,9 +25,7 @@ function createMessageUI(data) {
 
   if (isSent) {
     return `<div class="message-wrapper sent">
-                <div class="message-content">
                     <div class="message">${safeMessage}</div>
-                </div>
                 <span class="initials profile" title="${safeUsername}">${initials}</span>
             </div>`;
   } else {
