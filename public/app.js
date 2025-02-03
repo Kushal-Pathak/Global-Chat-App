@@ -48,8 +48,14 @@ function escapeHTML(str) {
     .replace(/'/g, "&#039;");
 }
 
-// Establish a WebSocket connection to the same host
-const ws = new WebSocket(`ws://${window.location.host}`);
+// Decide between ws:// or wss:// based on current location
+const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+
+// Build the full URL, e.g., wss://yourdomain.com
+const wsUrl = `${protocol}//${window.location.host}`;
+
+// Create the WebSocket
+const ws = new WebSocket(wsUrl);
 
 // Get send button and the message input field
 const sendBtn = document.getElementById("send-btn");
