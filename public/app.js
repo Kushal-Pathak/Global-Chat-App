@@ -6,7 +6,7 @@ if (!current_username) {
 }
 
 // Check if user id is in local storage if not then create and store new one
-let current_user_id = localStorage.getItem("userID");
+let current_user_id = localStorage.getItem("chat_user_id");
 if (!current_user_id) {
   // Generate a random number as user id
   current_user_id = Math.floor(Math.random() * 1000000).toString();
