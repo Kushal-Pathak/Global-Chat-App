@@ -46,10 +46,10 @@ function escapeHTML(str) {
     .replace(/'/g, "&#039;");
 }
 
-// Decide between ws:// or wss:// based on current location
+// Decide between ws:// or wss:// 
 const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
 
-// Build the full URL, e.g., wss://yourdomain.com
+// Build the full URL, e.g., wss://domain-name.com
 const wsUrl = `${protocol}//${window.location.host}`;
 
 // Create the WebSocket
